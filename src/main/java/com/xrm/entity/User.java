@@ -28,4 +28,5 @@ public class User {
     private String lastName;
     @NonNull
     private String password;
+    private String otp = "";
 }
