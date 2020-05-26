@@ -16,12 +16,12 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
-    private Long id;    
-    @Column(unique = true,name = "userid")
+    private Long id;
+    @Column(unique = true, name = "userid")
     @NonNull
     private String userId;
     @NonNull
-    @Column(name = "firstname")
+    @Column(name = "firstname", nullable = false)
     private String firstName;
     @NonNull
     @Column(name = "lastname")
