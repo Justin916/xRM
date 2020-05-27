@@ -1,6 +1,6 @@
 package com.xrm;
 
-import com.xrm.repository.UserRepository;
+import com.xrm.repository.XMRUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -11,7 +11,7 @@ public class MyRunner implements CommandLineRunner {
 //    private static final Logger logger = LoggerFactory.getLogger(MyRunner.class);
 
     @Autowired
-    UserRepository userRepository;
+    XMRUserRepository userRepository;
 
     @Override
     public void run(String... args) {

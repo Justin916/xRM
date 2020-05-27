@@ -10,23 +10,23 @@ import javax.persistence.*;
 @ToString
 @Builder
 @Entity
-@NamedQuery(name = "User.findByUserId", query = "select u from User u where u.userId = ?1")
-@Table(name = "user", schema = "xrm")
-public class User {
+@NamedQuery(name = "XRMUser.findByUserId", query = "select u from XRMUser u where u.userId = ?1")
+//@Table(name = "xrmuser", schema = "xrm")
+public class XRMUser {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
-    private Long id;    
-    @Column(unique = true,name = "userid")
+    private Long id;
+    @Column(unique = true, name = "userid")
     @NonNull
     private String userId;
-    @NonNull
-    @Column(name = "firstname")
+    @Column(name = "firstname", nullable = false)
     private String firstName;
     @NonNull
-    @Column(name = "lastname")
+    @Column(name = "lastname", nullable = false)
     private String lastName;
     @NonNull
+    @Column(nullable = false)
     private String password;
     private String otp = "";
 }

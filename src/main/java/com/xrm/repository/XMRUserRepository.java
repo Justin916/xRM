@@ -1,11 +1,11 @@
 package com.xrm.repository;
 
-import com.xrm.entity.User;
+import com.xrm.entity.XRMUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User,Long> {
+public interface XMRUserRepository extends JpaRepository<XRMUser,Long> {
 
-    User findByUserId(String userId);
+    XRMUser findByUserId(String userId);
 }
